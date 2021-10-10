@@ -1,0 +1,35 @@
+openapi: 3.0.0
+info:
+  version: "1.0"
+  title: "Метро API"
+
+servers:
+  - url: https://127.0.0.1:5000
+
+paths:
+  /get:
+    get:
+      summary: Получение новостей за период
+      parameters:
+        - name: day
+          in: query
+          description: Количество дней за которые нужно вывести данные
+          schema:
+            type: string
+            example: 1
+          example: 1
+
+      responses:
+        '200':
+          description: OK
+          content:
+            json:
+              schema:
+                example: [
+    {
+        "image_url": "https://app-bucket.mosmetro.ru/1_photo1633705441.jpeg",
+        "news_url": "/news/detail/?news=783",
+        "publication_date": "2021-10-09",
+        "title": "Жители Комсомольска-на-Амуре смогут оплачивать проезд картой «Тройка» во всех городских автобусах"
+    }
+]
