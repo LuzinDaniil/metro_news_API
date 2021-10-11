@@ -8,7 +8,7 @@ Base = declarative_base(metadata=metadata)
 class NewsModel(Base):
     __tablename__ = 'news_table'
     id = Column(String(36), primary_key=True, nullable=False)
-    title = Column(Text, unique=True)
+    title = Column(Text)
     image = Column(Text)
     url = Column(Text)
     date = Column(DateTime)

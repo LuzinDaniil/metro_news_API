@@ -25,8 +25,7 @@ def upgrade():
     sa.Column('url', sa.Text(), nullable=True),
     sa.Column('date', sa.DateTime(), nullable=True),
     sa.Column('processing_date', sa.DateTime(), nullable=True),
-    sa.PrimaryKeyConstraint('id', name=op.f('pk__news_table')),
-    sa.UniqueConstraint('title', name=op.f('uq__news_table__title'))
+    sa.PrimaryKeyConstraint('id', name=op.f('pk__news_table'))
     )
     # ### end Alembic commands ###
 
